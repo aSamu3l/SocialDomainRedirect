@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const subdomainRedirects = {
+                "yt": "https://youtube.com/@channel",
+                "youtube": "https://youtube.com/@channel",
+                "fb": "https://facebook.com/@page",
+                "facebook": "https://facebook.com/@page",
+                "ig": "https://instagram.com/@profile",
+                "instagram": "https://instagram.com/@profile",
+                "tt": "https://tiktok.com/@profile",
+                "tiktok": "https://tiktok.com/@profile",
+                "x": "https://twitter.com/@profile",
+                "twitter": "https://twitter.com/@profile",
+                "discord": "https://discord.gg/@server",
+                "github": "https://github.com/profile",
+                "linkedin": "https://linkedin.com/in/profile",
+                "tw": "https://twitch.tv/profile",
+                "twitch": "https://twitch.tv/profile",
+                "spotify": "https://open.spotify.com/user/profile",
+                "steam": "https://steamcommunity.com/id/profile"
+            };
+
+            const hostname = window.location.hostname;
+            const subdomain = hostname.split('.')[0];
+
+            if (subdomainRedirects[subdomain]) {
+                document.getElementById("message").textContent = `Redirecting you to ${subdomainRedirects[subdomain]}...`;
+                window.location.href = subdomainRedirects[subdomain];
+            } else {
+                document.getElementById("message").textContent = "Invalid redirect.";
+            }
+        });
+    </script>
+    <style>
+        .css-selector {
+            background: linear-gradient(333deg, #2d1cbb, #e65918, #e518e6, #18dbe6);
+            background-size: 800% 800%;
+
+            -webkit-animation: background 49s ease infinite;
+            -moz-animation: background 49s ease infinite;
+            -o-animation: background 49s ease infinite;
+            animation: background 49s ease infinite;
+        }
+
+        @-webkit-keyframes background {
+            0% {
+                background-position: 10% 0%
+            }
+            50% {
+                background-position: 91% 100%
+            }
+            100% {
+                background-position: 10% 0%
+            }
+        }
+
+        @-moz-keyframes background {
+            0% {
+                background-position: 10% 0%
+            }
+            50% {
+                background-position: 91% 100%
+            }
+            100% {
+                background-position: 10% 0%
+            }
+        }
+
+        @-o-keyframes background {
+            0% {
+                background-position: 10% 0%
+            }
+            50% {
+                background-position: 91% 100%
+            }
+            100% {
+                background-position: 10% 0%
+            }
+        }
+
+        @keyframes background {
+            0% {
+                background-position: 10% 0%
+            }
+            50% {
+                background-position: 91% 100%
+            }
+            100% {
+                background-position: 10% 0%
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #f0f8ff; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;" class="css-selector">
+<p id="message" style="font-size: 1.5em; color: #ffffff;">Checking subdomain...</p>
+</body>
+</html>
