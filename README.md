@@ -21,6 +21,7 @@ const subdomainRedirects = {
                 "x": "https://twitter.com/@profile",
                 "twitter": "https://twitter.com/@profile",
                 "discord": "https://discord.gg/@server",
+                "gh": "https://github.com/profile",
                 "github": "https://github.com/profile",
                 "linkedin": "https://linkedin.com/in/profile",
                 "tw": "https://twitch.tv/profile",
